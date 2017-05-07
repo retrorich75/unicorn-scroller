@@ -24,6 +24,7 @@ You can install these via pip with:
     sudo pip install Pillow (in case you have missing libaries then read Pillow required Libaries below)
     sudo pip install pyephem
     sudo apt-get install python-feedparser
+    sudo apt-get install fortune-mod
 
 ## Pillow required Libaries
 
