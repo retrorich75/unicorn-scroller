@@ -77,7 +77,7 @@ Displays the current date.
 Example: ![time](doc/weather2x.png)
 
 Displays the current weather conditions plus a 3 day forecast.  
-This uses [BBC weather feeds](https://support.bbc.co.uk/platform/feeds/WeatherFeeds.htm), you will need to edit the script and add your location ID, the previous link should explain how to get this.
+This uses [BBC weather feeds](https://support.bbc.co.uk/platform/feeds/WeatherFeeds.htm), you will need to edit the **weather** script and change to your own location ID, the quickest way to know is by going to http://www.bbc.co.uk/weather/ find your town/city and look at the number in the url.
 
 ### astro
 
