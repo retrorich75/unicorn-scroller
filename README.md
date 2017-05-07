@@ -3,29 +3,44 @@
 A scrolling information display for the Pimoroni Unicorn HAT/PHAT on Raspberry Pi.  
 By Andrew Wedgbury <wedge@sconemad.com>  
 
+Updated for use with Raspbian Jessie Lite (Version:April 2017) https://www.raspberrypi.org/downloads/raspbian/
+
 ## Setup
 
-To start with, clone this git repo!
+To start with, clone this git repo!  
 
+    sudo git clone https://github.com/sconemad/unicorn-scroller.git
+
+## Add PIP if not already installed
+
+    sudo apt-get install python3-pip
+    
 Install the unicornhat Python module from Pimoroni following the [instructions here] (https://github.com/pimoroni/unicorn-hat).
 
-unicorn-scroller.py uses the [PIL](http://www.pythonware.com/products/pil/) module.   
+unicorn-scroller.py uses the [Pillow](https://pypi.python.org/pypi/Pillow/4.1.1) module.   
 The astro message script uses the [pyephem](http://rhodesmill.org/pyephem/) module.   
 You can install these via pip with:
 
-    sudo pip install PIL
+    sudo pip install Pillow (in case you have missing libaries then read Pillow required Libaries below)
     sudo pip install pyephem
+    sudo apt-get install python-feedparser
+
+## Pillow required Libaries
+
+    sudo apt-get install python3-dev python3-setuptools libjpeg-dev zlib1g-dev libpng12-dev libfreetype6-dev
+
 
 You also need a font to use when displaying text. It's difficult to find a font that looks good at 8 pixels high - The best I've found is Minecraftia-Regular, which you can download from http://www.dafont.com/minecraftia.font
 Unzip the font into the same directory as the script. You can also try out some different fonts - there are plenty available for free online. Unzip your chosen font into the same directory and modify the "font" and "font-offset" variables near the top of the main program.
 
-You'll find various other variables defined at the top of unicorn-scroller.py, which you can use to set the display orientation, brightness, background colour and scroll speed.
+## Personalised settings
+You'll find various other variables defined at the top of **unicorn-scroller.py**, which you can use to set the display orientation, brightness, background colour and scroll speed.
 
 ## Runing
 
 To run from the command line:
 
-    sudo python unicorn-scroller.py
+    sudo ./unicorn-scroller.py
 
 To run on system boot, add the following to /etc/rc.local
 (before the "exit 0" line at the end):
